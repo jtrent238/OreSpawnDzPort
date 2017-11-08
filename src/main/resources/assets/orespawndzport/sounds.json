@@ -1,0 +1,4 @@
+{
+    "alo_hurt": {"category": "master","sounds": [{"name": "alo_hurt","stream": false}]},
+	"hercules_death": {"category": "master","sounds": [{"name": "hercules_death","stream": false}]}
+	}
