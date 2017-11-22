@@ -1,16 +1,27 @@
 package com.jtrent238.orespawndzport;
 
+import com.jtrent238.orespawndzport.entity.EntitySparkleMuffin;
+import com.jtrent238.orespawndzport.entity.EntityWhiner;
+
 import cpw.mods.fml.common.registry.EntityRegistry;
 import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.world.biome.BiomeGenBase;
 
 public class EntityLoader {
 
+	private static int WhinerID = Main.WhinerID;
+	private static int SparkleMuffinID = Main.SparkleMuffinID;
+
 	public static void LoadEntitys() {
 
-		//EntityRegistry.registerGlobalEntityID(EntityBeetle.class, "EntityBeetle",EntityRegistry.findGlobalUniqueEntityId());
-	    //EntityRegistry.addSpawn(EntityBeetle.class, 8, 4, 6, EnumCreatureType.creature);
-		
+		EntityRegistry.registerGlobalEntityID(EntityWhiner.class, "EntityWhiner", WhinerID );
+		EntityRegistry.addSpawn(EntityWhiner.class, 8, 4, 6, EnumCreatureType.creature, BiomeGenBase.forest, BiomeGenBase.forestHills, BiomeGenBase.jungle, BiomeGenBase.forest, BiomeGenBase.plains, BiomeGenBase.beach, BiomeGenBase.mesa, BiomeGenBase.savanna, BiomeGenBase.desert, BiomeGenBase.desertHills);
+		//EntityRegistry.instance();EntityRegistry.registerModEntity(EntityWhiner.class, "EntityWhiner", WhinerID, 64, 1, 2, false);
+	    
+		EntityRegistry.registerGlobalEntityID(EntitySparkleMuffin.class, "EntitySparkleMuffin", SparkleMuffinID );
+		EntityRegistry.addSpawn(EntitySparkleMuffin.class, 8, 4, 6, EnumCreatureType.creature, BiomeGenBase.forest, BiomeGenBase.forestHills, BiomeGenBase.jungle, BiomeGenBase.forest, BiomeGenBase.plains, BiomeGenBase.beach, BiomeGenBase.mesa, BiomeGenBase.savanna, BiomeGenBase.desert, BiomeGenBase.desertHills);
+		//EntityRegistry.instance();EntityRegistry.registerModEntity(EntityWhiner.class, "EntityWhiner", WhinerID, 64, 1, 2, false);
+	    
 	}
 
 }
