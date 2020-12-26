@@ -3,12 +3,22 @@ package com.jtrent238.orespawndzport;
 import com.jtrent238.orespawndzport.items.EarthStaff;
 import com.jtrent238.orespawndzport.items.FireStaff;
 import com.jtrent238.orespawndzport.items.ItemCoin;
+import com.jtrent238.orespawndzport.items.ItemCopperAxe;
+import com.jtrent238.orespawndzport.items.ItemCopperHoe;
+import com.jtrent238.orespawndzport.items.ItemCopperPickAxe;
+import com.jtrent238.orespawndzport.items.ItemCopperShovel;
+import com.jtrent238.orespawndzport.items.ItemCopperSword;
 import com.jtrent238.orespawndzport.items.ItemFlag;
 import com.jtrent238.orespawndzport.items.ItemLump;
 import com.jtrent238.orespawndzport.items.ItemQuinoa;
 import com.jtrent238.orespawndzport.items.ItemShrinkBerry;
 import com.jtrent238.orespawndzport.items.ItemSpam;
 import com.jtrent238.orespawndzport.items.ItemSpawnEgg;
+import com.jtrent238.orespawndzport.items.ItemTinAxe;
+import com.jtrent238.orespawndzport.items.ItemTinHoe;
+import com.jtrent238.orespawndzport.items.ItemTinPickAxe;
+import com.jtrent238.orespawndzport.items.ItemTinShovel;
+import com.jtrent238.orespawndzport.items.ItemTinSword;
 import com.jtrent238.orespawndzport.items.ItemYellowApple;
 import com.jtrent238.orespawndzport.items.ItemYucky;
 import com.jtrent238.orespawndzport.items.LightningStaff;
@@ -17,12 +27,22 @@ import com.jtrent238.orespawndzport.items.PlantStaff;
 import com.jtrent238.orespawndzport.items.ShrinkRay;
 import com.jtrent238.orespawndzport.items.WaterStaff;
 import com.jtrent238.orespawndzport.items.WindStaff;
+import com.jtrent238.orespawndzport.items.armor.Copper_Armor;
+import com.jtrent238.orespawndzport.items.armor.Tin_Armor;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraft.item.Item.ToolMaterial;
+import net.minecraft.item.ItemArmor;
+import net.minecraft.item.ItemArmor.ArmorMaterial;
+import net.minecraft.item.ItemAxe;
 import net.minecraft.item.ItemFood;
-
+import net.minecraft.item.ItemHoe;
+import net.minecraft.item.ItemPickaxe;
+import net.minecraft.item.ItemSpade;
+import net.minecraft.item.ItemSword;
+import net.minecraftforge.common.util.EnumHelper;
 public class ItemLoader {
 
 	public static Item shrinkberries;
@@ -64,10 +84,40 @@ public class ItemLoader {
 	public static Item coinplatinum;
 	public static Item coinsilver;
 	public static Item flag;
+	public static Item pinkgoo;
+	public static Item poker;
+	public static Item spring;
+	public static Item table;
+	public static Item veye;
+	
+	
+	public static ItemSword coppersword;
+	public static ItemSpade coppershovel;
+	public static ItemPickaxe copperpickaxe;
+	public static ItemHoe copperhoe;
+	public static ItemAxe copperaxe;
+	public static ItemArmor copperhelmet;
+	public static ItemArmor copperchestplate;
+	public static ItemArmor copperleggings;
+	public static ItemArmor copperboots;
+	public static ItemSword tinsword;
+	public static ItemSpade tinshovel;
+	public static ItemPickaxe tinpickaxe;
+	public static ItemHoe tinhoe;
+	public static ItemAxe tinaxe;
+	public static ItemArmor tinhelmet;
+	public static ItemArmor tinchestplate;
+	public static ItemArmor tinleggings;
+	public static ItemArmor tinboots;
 	
 	public static Item eggwhiner;
 	public static Item eggvixen;
 	public static Item eggsparklemuffin;
+	
+	private static ArmorMaterial AM_COPPER = EnumHelper.addArmorMaterial("AM_COPPER", 16, new int[] {3, 8, 6, 3}, 30);
+	private static ToolMaterial TM_COPPER = EnumHelper.addToolMaterial("TM_COPPER", 3 , 1561, 8.0F, 3.0F, 10);;
+	private static ArmorMaterial AM_TIN = EnumHelper.addArmorMaterial("AM_COPPER", 16, new int[] {3, 8, 6, 3}, 30);
+	private static ToolMaterial TM_TIN = EnumHelper.addToolMaterial("TM_TIN", 3 , 1561, 8.0F, 3.0F, 10);;
 	
 	public static void LoadItems() {
 		// TODO Auto-generated method stub
@@ -79,7 +129,7 @@ public class ItemLoader {
 		pig_toes = new ItemYucky(0, 0, false).setUnlocalizedName("Pig_Toes").setCreativeTab(CreativeTabs.tabFood).setTextureName("orespawndzport:pig_toes");
 		pig_tail = new ItemYucky(0, 0, false).setUnlocalizedName("Pig_Tail").setCreativeTab(CreativeTabs.tabFood).setTextureName("orespawndzport:pig_tail");
 		pig_ear = new ItemYucky(0, 0, false).setUnlocalizedName("Pig_Ear").setCreativeTab(CreativeTabs.tabFood).setTextureName("orespawndzport:pig_ear");
-		wormfood = new ItemYucky(0, 0, false).setUnlocalizedName("Worm_Food").setCreativeTab(CreativeTabs.tabFood).setTextureName("orespawndzport:worm_food");
+		wormfood = new ItemYucky(0, 0, false).setUnlocalizedName("wormfood").setCreativeTab(CreativeTabs.tabFood).setTextureName("orespawndzport:worm_food");
 		earthstaff = new EarthStaff().setUnlocalizedName("EarthStaff").setCreativeTab(CreativeTabs.tabMisc).setTextureName("orespawndzport:earthstaff");
 		windstaff = new WindStaff().setUnlocalizedName("WindStaff").setCreativeTab(CreativeTabs.tabMisc).setTextureName("orespawndzport:windstaff");
 		firestaff = new FireStaff().setUnlocalizedName("FireStaff").setCreativeTab(CreativeTabs.tabMisc).setTextureName("orespawndzport:firestaff");
@@ -110,6 +160,27 @@ public class ItemLoader {
 		coinplatinum = new ItemCoin().setUnlocalizedName("coinplatinum").setCreativeTab(CreativeTabs.tabMaterials).setTextureName("orespawndzport:coinplatinum");
 		coinsilver = new ItemCoin().setUnlocalizedName("coinsilver").setCreativeTab(CreativeTabs.tabMaterials).setTextureName("orespawndzport:coinsilver");
 		flag = new ItemFlag().setUnlocalizedName("flag").setCreativeTab(CreativeTabs.tabMaterials).setTextureName("orespawndzport:flag");
+		pinkgoo = new Item().setUnlocalizedName("pinkgoo").setCreativeTab(CreativeTabs.tabMaterials).setTextureName("orespawndzport:pinkgoo");
+		poker = new Item().setUnlocalizedName("poker").setCreativeTab(CreativeTabs.tabMaterials).setTextureName("orespawndzport:poker");
+		
+		coppersword = (ItemSword) new ItemCopperSword(TM_COPPER).setUnlocalizedName("coppersword").setCreativeTab(CreativeTabs.tabCombat).setTextureName(Main.MODID + ":coppersword");
+		coppershovel = (ItemSpade) new ItemCopperShovel(TM_COPPER).setUnlocalizedName("coppershovel").setCreativeTab(CreativeTabs.tabTools).setTextureName(Main.MODID + ":coppershovel");
+		copperpickaxe = (ItemPickaxe) new ItemCopperPickAxe(TM_COPPER).setUnlocalizedName("copperpickaxe").setCreativeTab(CreativeTabs.tabTools).setTextureName(Main.MODID + ":copperpickaxe");
+		copperhoe = (ItemHoe) new ItemCopperHoe(TM_COPPER).setUnlocalizedName("copperhoe").setCreativeTab(CreativeTabs.tabTools).setTextureName(Main.MODID + ":copperhoe");
+		copperaxe = (ItemAxe) new ItemCopperAxe(TM_COPPER).setUnlocalizedName("copperaxe").setCreativeTab(CreativeTabs.tabTools).setTextureName(Main.MODID + ":copperaxe");
+		copperhelmet = (ItemArmor) new Copper_Armor(AM_COPPER, 0, 0).setUnlocalizedName("copperhelmet").setTextureName(Main.MODID + ":copperhelmet").setCreativeTab(CreativeTabs.tabCombat);
+		copperchestplate = (ItemArmor) new Copper_Armor(AM_COPPER, 1, 1).setUnlocalizedName("copperchestplate").setTextureName(Main.MODID + ":copperchestplate").setCreativeTab(CreativeTabs.tabCombat);
+		copperleggings = (ItemArmor) new Copper_Armor(AM_COPPER, 2, 2).setUnlocalizedName("copperleggings").setTextureName(Main.MODID + ":copperleggings").setCreativeTab(CreativeTabs.tabCombat);
+		copperboots = (ItemArmor) new Copper_Armor(AM_COPPER, 3, 3).setUnlocalizedName("copperboots").setTextureName(Main.MODID + ":copperboots").setCreativeTab(CreativeTabs.tabCombat);
+		tinsword = (ItemSword) new ItemTinSword(TM_TIN).setUnlocalizedName("tinsword").setCreativeTab(CreativeTabs.tabCombat).setTextureName(Main.MODID + ":tinsword");
+		tinshovel = (ItemSpade) new ItemTinShovel(TM_TIN).setUnlocalizedName("tinshovel").setCreativeTab(CreativeTabs.tabTools).setTextureName(Main.MODID + ":tinshovel");
+		tinpickaxe = (ItemPickaxe) new ItemTinPickAxe(TM_TIN).setUnlocalizedName("tinpickaxe").setCreativeTab(CreativeTabs.tabTools).setTextureName(Main.MODID + ":tinpickaxe");
+		tinhoe = (ItemHoe) new ItemTinHoe(TM_TIN).setUnlocalizedName("tinhoe").setCreativeTab(CreativeTabs.tabTools).setTextureName(Main.MODID + ":tinhoe");
+		tinaxe = (ItemAxe) new ItemTinAxe(TM_TIN).setUnlocalizedName("tinaxe").setCreativeTab(CreativeTabs.tabTools).setTextureName(Main.MODID + ":tinaxe");
+		tinhelmet = (ItemArmor) new Tin_Armor(AM_TIN, 0, 0).setUnlocalizedName("tinhelmet").setTextureName(Main.MODID + ":tinhelmet").setCreativeTab(CreativeTabs.tabCombat);
+		tinchestplate = (ItemArmor) new Tin_Armor(AM_TIN, 1, 1).setUnlocalizedName("tinchestplate").setTextureName(Main.MODID + ":tinchestplate").setCreativeTab(CreativeTabs.tabCombat);
+		tinleggings = (ItemArmor) new Tin_Armor(AM_TIN, 2, 2).setUnlocalizedName("tinleggings").setTextureName(Main.MODID + ":tinleggings").setCreativeTab(CreativeTabs.tabCombat);
+		tinboots = (ItemArmor) new Tin_Armor(AM_TIN, 3, 3).setUnlocalizedName("tinboots").setTextureName(Main.MODID + ":tinboots").setCreativeTab(CreativeTabs.tabCombat);
 		
 		eggwhiner = new ItemSpawnEgg(0, 0).setUnlocalizedName("WhinerEgg").setCreativeTab(CreativeTabs.tabMisc).setTextureName("orespawndzport:eggwhiner");
 		eggvixen = new ItemSpawnEgg(0, 0).setUnlocalizedName("VixenEgg").setCreativeTab(CreativeTabs.tabMisc).setTextureName("orespawndzport:eggvixen");
@@ -128,6 +199,7 @@ public class ItemLoader {
 		GameRegistry.registerItem(pig_toes, pig_toes.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(pig_tail, pig_tail.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(pig_ear, pig_ear.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(wormfood, wormfood.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(earthstaff, earthstaff.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(windstaff, windstaff.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(firestaff, firestaff.getUnlocalizedName().substring(5));
@@ -158,6 +230,27 @@ public class ItemLoader {
 		GameRegistry.registerItem(coinplatinum, coinplatinum.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(coinsilver, coinsilver.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(flag, flag.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(pinkgoo, pinkgoo.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(poker, poker.getUnlocalizedName().substring(5));
+		
+		GameRegistry.registerItem(coppersword, coppersword.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(coppershovel, coppershovel.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(copperpickaxe, copperpickaxe.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(copperhoe, copperhoe.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(copperaxe, copperaxe.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(copperhelmet, copperhelmet.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(copperchestplate, copperchestplate.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(copperleggings, copperleggings.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(copperboots, copperboots.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(tinsword, tinsword.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(tinshovel, tinshovel.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(tinpickaxe, tinpickaxe.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(tinhoe, tinhoe.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(tinaxe, tinaxe.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(tinhelmet, tinhelmet.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(tinchestplate, tinchestplate.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(tinleggings, tinleggings.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(tinboots, tinboots.getUnlocalizedName().substring(5));
 		
 		GameRegistry.registerItem(eggwhiner, eggwhiner.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(eggvixen, eggvixen.getUnlocalizedName().substring(5));

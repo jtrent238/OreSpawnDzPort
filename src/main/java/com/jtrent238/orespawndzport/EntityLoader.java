@@ -14,11 +14,11 @@ public class EntityLoader {
 
 	public static void LoadEntitys() {
 
-		EntityRegistry.registerGlobalEntityID(EntityWhiner.class, "EntityWhiner", WhinerID );
+		EntityRegistry.registerGlobalEntityID(EntityWhiner.class, "EntityWhiner", EntityRegistry.findGlobalUniqueEntityId() , 0xff0088, 0xffffff);
 		EntityRegistry.addSpawn(EntityWhiner.class, 8, 4, 6, EnumCreatureType.creature, BiomeGenBase.forest, BiomeGenBase.forestHills, BiomeGenBase.jungle, BiomeGenBase.forest, BiomeGenBase.plains, BiomeGenBase.beach, BiomeGenBase.mesa, BiomeGenBase.savanna, BiomeGenBase.desert, BiomeGenBase.desertHills);
 		//EntityRegistry.instance();EntityRegistry.registerModEntity(EntityWhiner.class, "EntityWhiner", WhinerID, 64, 1, 2, false);
 	    
-		EntityRegistry.registerGlobalEntityID(EntitySparkleMuffin.class, "EntitySparkleMuffin", SparkleMuffinID );
+		EntityRegistry.registerGlobalEntityID(EntitySparkleMuffin.class, "EntitySparkleMuffin", EntityRegistry.findGlobalUniqueEntityId() , 0xff0088, 0xffffff);
 		EntityRegistry.addSpawn(EntitySparkleMuffin.class, 8, 4, 6, EnumCreatureType.creature, BiomeGenBase.forest, BiomeGenBase.forestHills, BiomeGenBase.jungle, BiomeGenBase.forest, BiomeGenBase.plains, BiomeGenBase.beach, BiomeGenBase.mesa, BiomeGenBase.savanna, BiomeGenBase.desert, BiomeGenBase.desertHills);
 		//EntityRegistry.instance();EntityRegistry.registerModEntity(EntityWhiner.class, "EntityWhiner", WhinerID, 64, 1, 2, false);
 	    
